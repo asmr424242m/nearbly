@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "nearbymob",
+	"version": "${version}",
+	"name": "Nearby Mob HUD",
+	"description": "Shows the nearest tracked mob as a rotating 3D model in a movable, resizable HUD panel. Includes a searchable mob picker with live 3D previews.",
+	"authors": [
+		"NearbyMob contributors"
+	],
+	"license": "MIT",
+	"icon": "assets/nearbymob/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.comfortable.nearbymob.NearbyMobClient"
+		],
+		"modmenu": [
+			"com.comfortable.nearbymob.config.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		{
+			"config": "nearbymob.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*",
+		"cloth-config": ">=21.11.0"
+	},
+	"suggests": {
+		"modmenu": ">=17.0.0"
+	}
+}
